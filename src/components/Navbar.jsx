@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import MovieIcon from '@mui/icons-material/Movie';
 
 export default function Navbar() {
   return (
@@ -19,10 +19,10 @@ export default function Navbar() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <MovieIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Movies!
+            Movie Search!
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>

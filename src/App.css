@@ -1,4 +1,9 @@
-.App {
+@import url('@fontsource/roboto/300.css');
+@import url('@fontsource/roboto/400.css');
+@import url('@fontsource/roboto/500.css');
+@import url('@fontsource/roboto/700.css');
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +40,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
