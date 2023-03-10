@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { TextField, Button } from '@mui/material';
 
 const Search = ({ search }) => {
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState('');
 
   const handleSearchInputChanges = e => {
     setSearchValue(e.target.value);
   };
 
   const resetInputField = () => {
-    setSearchValue("");
+    setSearchValue('');
   };
 
   const callSearchFunction = e => {
@@ -16,19 +17,22 @@ const Search = ({ search }) => {
     search(searchValue);
     resetInputField();
   };
-
+  
   return (
-    <form className="search">
-      <input
-        value={searchValue}
-        onChange={handleSearchInputChanges}
-        type="text"
-      />
-
-      <input onClick={callSearchFunction} type="submit" value="SEARCH" />
-    </form>
+    <TextField
+    id='outlined basic'
+    label='Search...'
+    value={searchValue}
+    onChange={handleSearchInputChanges}
+    onKeyPress= {(e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        search(searchValue);
+        resetInputField();
+      }
+}}
+  />
   );
 };
 
-
-export default Search;
+export default Search
