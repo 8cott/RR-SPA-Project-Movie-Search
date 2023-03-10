@@ -53,6 +53,7 @@ const App = () => {
         <Container>
         <CircularProgress />
         </Container>
+        
     ) : errorMessage ? (
       <div className="errorMessage">{errorMessage}</div>
     ) : (
@@ -69,18 +70,21 @@ const App = () => {
     <main>
       <div>
         <Container align='center' maxWidth='sm'>
-          <Typography variant='h2' align='center' color='textPrimary' gutterBottom>
+          <Typography paddingTop='1rem' variant='h2' align='center' color='textPrimary' gutterBottom>
             Search for Movies
           </Typography>
           <Typography variant='h5' align='center' color='textSecondary' paragraph>
             
           </Typography>
           <Search search={search} /> 
-      
+        <br />
+        <br />
         </Container>
 
       </div>
-      <div>{retrievedMovies}</div>
+      <div>
+        {retrievedMovies}
+      </div>
     </main>
     </ThemeProvider>  
     </>

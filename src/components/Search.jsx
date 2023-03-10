@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button } from '@mui/material';
+import { TextField } from '@mui/material';
 
 const Search = ({ search }) => {
   const [searchValue, setSearchValue] = useState('');
@@ -11,16 +11,11 @@ const Search = ({ search }) => {
   const resetInputField = () => {
     setSearchValue('');
   };
-
-  const callSearchFunction = e => {
-    e.preventDefault();
-    search(searchValue);
-    resetInputField();
-  };
   
   return (
     <TextField
     id='outlined basic'
+    sx={{ label: { color: '#dca09f' } }}
     label='Search...'
     value={searchValue}
     onChange={handleSearchInputChanges}
